@@ -44,7 +44,7 @@ class Course extends Component {
         return (
             <div className="course">
                 <p className="course-name">{this.props.name}</p>
-                <p className="course-price">{this.props.price}</p>
+                <p className="course-price">${this.props.price}</p>
                 <button className={this.state.active? 'remove' : 'buy'} onClick={this.changeState}>{this.state.active? 'Remove' : 'Buy'}</button>
             </div>
         );
