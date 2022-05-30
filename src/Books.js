@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { Outlet } from "react-router-dom";
 
 class Books extends Component{
     constructor(props){
@@ -6,7 +7,10 @@ class Books extends Component{
     }
     render(){
         return(
-            <div>Some Books to help you!!!</div>
+            <div>
+                <div>Some Books to help you!!!</div>
+                <Outlet/>
+            </div>
         );
     }
 }

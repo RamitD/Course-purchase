@@ -7,13 +7,16 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Books from './Books';
 import Guides from './Guides';
 import Laptops from './Laptops';
+import Journals from './Journals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
       <Route path='/' exact element={<App/>}>
-        <Route path='/books' element={<Books/>}></Route>
+        <Route path='/books' element={<Books/>}>
+          <Route path='/books/journals' element={<Journals/>}></Route>
+        </Route>
         <Route path='/guides' element={<Guides/>}></Route>
         <Route path='/laptops' element={<Laptops/>}></Route>
       </Route>

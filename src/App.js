@@ -3,36 +3,37 @@ import './App.css';
 import CourseSale from './CourseSale';
 
 function App() {
-  var courses =[
+  var courses = [
     {
-      name:'HTML, CSS, JS',
+      name: 'HTML, CSS, JS',
       price: 199
     },
     {
-      name:'Python',
+      name: 'Python',
       price: 199
     },
     {
-      name:'Full Stack',
+      name: 'Full Stack',
       price: 399
     },
     {
-      name:'Java',
+      name: 'Java',
       price: 99
     },
   ]
   return (
     <div className="App">
-      <h2>Welcome to your Courses</h2>
       <ul>
         <li>
           <Link to='/guides'>Guides</Link>
           <Link to='/laptops'>Laptops</Link>
           <Link to='/books'>Books</Link>
+          <Link to='/books/journals'>Journals</Link>
         </li>
       </ul>
+      <h2>Welcome to your Courses</h2>
       <CourseSale courses={courses} />
-      <Outlet/>
+      <Outlet />
     </div>
   );
 }
